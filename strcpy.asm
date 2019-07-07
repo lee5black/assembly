@@ -43,20 +43,14 @@ strcpy_loop:
     inc rdi
     inc rsi
     loop strcpy_loop
-
     mov byte [rsi], 0
 
-strcpy_loop_write:
-    
-    
-
+strcpy_loop_write:    
     mov rdi, 1
     mov rsi, dest
     mov rdx, 0xc
     mov rax, 1
     syscall
-
-
 
 strcpy_loop_end:
     mov rax, 60 
@@ -64,8 +58,6 @@ strcpy_loop_end:
     ;mov rax, dest 
     ;leave 
     ;ret 
-
-
 
 section .bss 
     dest resb 20
